@@ -3,9 +3,24 @@
 
 using namespace std;
 
-int main(){
+template <class T>
+void make2dArray(T **x, int numRows, int rowSize[]){
 
-int n;
+x = new T * [numRows];
+
+for(int i=0; i<numRows; i++){
+x[i]= new int [rowSize[i]];
+}
+
+cout<<x[1][2];
+
+}
+
+int main(){
+int **k;
+int rowsize[]={4,3,2,5};
+make2dArray(k,4,rowsize);
+/*int n;
 
 cout<<"Enter the size of array :";
 cin>>n;
@@ -20,6 +35,9 @@ cout<<"\nEnter the number of element do you wish to see : ";
 cin>>i;
 cout<<"Number is : "<<x[i-1]<<"\n";
 cout<<"And address is : "<<&x[i]<<"\n";
+*/
+
+
 
 return 0;
 }
