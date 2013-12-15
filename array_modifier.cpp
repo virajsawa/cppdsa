@@ -24,7 +24,10 @@ int *n= new int;
 int limit=(new_length>old_length)?old_length:new_length;
 
 for(int i=0; i<new_length; i++){
-if(i<limit){*(n+i)=*(o+i);}
+if(i<limit){
+*(n+i)=*(o+i);
+delete (o+i);
+}
 else{*(n+i)=0;}
 }
 
